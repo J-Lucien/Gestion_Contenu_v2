@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>ControllerFront</servlet-name>
+        <servlet-class>ControllerFront.ControllerFront</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginSession</servlet-name>
+        <servlet-class>Service.LoginSession</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FichierService</servlet-name>
+        <servlet-class>Service.ContenuService</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TelechargerFichier</servlet-name>
+        <servlet-class>Service.TelechargerFichier</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControllerFront</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginSession</servlet-name>
+        <url-pattern>/LoginSession</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FichierService</servlet-name>
+        <url-pattern>/FichierService</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TelechargerFichier</servlet-name>
+        <url-pattern>/TelechargerFichier</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
